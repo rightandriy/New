@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2BAB68DF1D844D7100F6FBC3"
+               BuildableName = "NewWeatherApp.app"
+               BlueprintName = "NewWeatherApp"
+               ReferencedContainer = "container:NewWeatherApp.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2BAB68F31D844D7100F6FBC3"
+               BuildableName = "NewWeatherAppTests.xctest"
+               BlueprintName = "NewWeatherAppTests"
+               ReferencedContainer = "container:NewWeatherApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2BAB68FE1D844D7100F6FBC3"
+               BuildableName = "NewWeatherAppUITests.xctest"
+               BlueprintName = "NewWeatherAppUITests"
+               ReferencedContainer = "container:NewWeatherApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2BAB68DF1D844D7100F6FBC3"
+            BuildableName = "NewWeatherApp.app"
+            BlueprintName = "NewWeatherApp"
+            ReferencedContainer = "container:NewWeatherApp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2BAB68DF1D844D7100F6FBC3"
+            BuildableName = "NewWeatherApp.app"
+            BlueprintName = "NewWeatherApp"
+            ReferencedContainer = "container:NewWeatherApp.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2BAB68DF1D844D7100F6FBC3"
+            BuildableName = "NewWeatherApp.app"
+            BlueprintName = "NewWeatherApp"
+            ReferencedContainer = "container:NewWeatherApp.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

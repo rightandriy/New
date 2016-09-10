@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import NewWeatherApp
+
 
 class NewWeatherAppTests: XCTestCase {
     
