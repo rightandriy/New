@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B118AE21D85E3A900278AD9 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B118AE11D85E3A900278AD9 /* WeatherCell.swift */; };
+		2B118AE41D8603D800278AD9 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B118AE31D8603D800278AD9 /* Location.swift */; };
 		2BAB68E41D844D7100F6FBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB68E31D844D7100F6FBC3 /* AppDelegate.swift */; };
 		2BAB68E61D844D7100F6FBC3 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAB68E51D844D7100F6FBC3 /* WeatherVC.swift */; };
 		2BAB68E91D844D7100F6FBC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BAB68E71D844D7100F6FBC3 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		0E80480EEAF6C92FE4DE2B13 /* Pods-NewWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewWeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewWeatherApp/Pods-NewWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
 		2B118AE11D85E3A900278AD9 /* WeatherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
+		2B118AE31D8603D800278AD9 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2BAB68E01D844D7100F6FBC3 /* NewWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BAB68E31D844D7100F6FBC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BAB68E51D844D7100F6FBC3 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				2BAB69131D84697600F6FBC3 /* CurrentWeather.swift */,
 				2BAB69151D84B0D700F6FBC3 /* Forecast.swift */,
 				2B118AE11D85E3A900278AD9 /* WeatherCell.swift */,
+				2B118AE31D8603D800278AD9 /* Location.swift */,
 			);
 			path = NewWeatherApp;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				2BAB69141D84697600F6FBC3 /* CurrentWeather.swift in Sources */,
 				2BAB69121D8467BD00F6FBC3 /* Constants.swift in Sources */,
 				2BAB69161D84B0D700F6FBC3 /* Forecast.swift in Sources */,
+				2B118AE41D8603D800278AD9 /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

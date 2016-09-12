@@ -8,8 +8,10 @@
 
 import UIKit
 import Alamofire
+import CoreLocation
 
-class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
+
+class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate{
     
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var temperatureLbl: UILabel!
@@ -20,6 +22,15 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
     
+    
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
+    
+    
+    
+    
+    
+    
     var currentWeather = CurrentWeather()
     var forecast: Forecast!
     var forecasts = [Forecast]()
@@ -29,27 +40,46 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startMonitoringSignificantLocationChanges()
+        
         tableView.delegate = self
         tableView.dataSource = self
         currentWeather = CurrentWeather()
         
         
-        currentWeather.DownloadWeatherDetails {
-            // Set up UI to view downloaded data
-            self.downloadForecastData {
-               self.updateNameUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        locationAuthStatus()
+    }
+    
+    func locationAuthStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            currentLocation = locationManager.location
+            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+            
+            currentWeather.DownloadWeatherDetails {
+                self.downloadForecastData {
+                    self.updateNameUI()
+                }
             }
             
             
+        }else {
+            locationManager.requestWhenInUseAuthorization()
+            locationAuthStatus()
         }
-        
-        
     }
     
     func downloadForecastData (completed: @escaping DownloadComplete){
         //Downloading forecast weather data for tableVIew
-        let forecastUrl = URL(string: FORESCAST_URL)!
-        Alamofire.request(forecastUrl).responseJSON{ respons in
+        
+        Alamofire.request(FORECAST_URL).responseJSON{ respons in
             let result = respons.result
             
             if let dict = result.value as? Dictionary <String, Any> {
